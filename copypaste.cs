@@ -30,6 +30,7 @@ class Program
             StartPosition = FormStartPosition.CenterScreen,
             Font = new Font("Segoe UI", 10f)
         };
+        try { f.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath); } catch { }
 
         var title = new Label
         {

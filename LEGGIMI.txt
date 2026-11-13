@@ -1,4 +1,4 @@
-copypaste
+﻿copypaste
 
 Piccolo programma per Windows con 10 caselle di testo. Accanto a ogni casella
 c'e' un pulsante "Copia": un clic e la frase e' negli appunti, pronta da incollare.
@@ -15,8 +15,10 @@ Le frasi si salvano da sole mentre scrivi, nel file
 Come si ricompila
 Serve solo Windows. Da PowerShell, nella cartella del progetto:
 
-  & "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /optimize /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll /out:copypaste.exe copypaste.cs
+  & "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /optimize /target:winexe /win32icon:copypaste.ico /r:System.Windows.Forms.dll /r:System.Drawing.dll /out:copypaste.exe copypaste.cs
 
 File
   copypaste.cs   codice sorgente (C#, Windows Forms)
+  copypaste.ico  icona del programma
   copypaste.exe  programma gia' compilato
+
