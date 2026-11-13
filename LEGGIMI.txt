@@ -1,0 +1,22 @@
+copypaste
+
+Piccolo programma per Windows con 10 caselle di testo. Accanto a ogni casella
+c'e' un pulsante "Copia": un clic e la frase e' negli appunti, pronta da incollare.
+
+Come si usa
+1. Apri copypaste.exe con un doppio clic.
+2. Scrivi una frase in una delle 10 caselle.
+3. Clicca "Copia" accanto alla frase. Il pulsante diventa verde con "Copiato".
+4. Incolla dove ti serve con Ctrl+V.
+
+Le frasi si salvano da sole mentre scrivi, nel file
+%APPDATA%\copypaste\frasi.txt, e si ritrovano alla riapertura.
+
+Come si ricompila
+Serve solo Windows. Da PowerShell, nella cartella del progetto:
+
+  & "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /optimize /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll /out:copypaste.exe copypaste.cs
+
+File
+  copypaste.cs   codice sorgente (C#, Windows Forms)
+  copypaste.exe  programma gia' compilato
